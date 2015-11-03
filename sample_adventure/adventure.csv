@@ -1,0 +1,8 @@
+id,title,message,required,prohibited,triggered,location,image,proximity
+1,My shoe...,"Bugger, I've lost my shoe! I'm pretty sure I left it either in Times Square New York, or on London Bridge in London... I should go back and check.",,,1,,shoe.jpg,
+2,New York...,"Well, I came to  New York and checked everywhere but couldn't find it. It must be in London...",1,3,0,new york,,100000
+3,London...,"Well, I came to  London and checked everywhere but couldn't find it. It must be in New York...",1,2,0,london,,100000
+4,New York...,"Well it wasn't here either, guess I'd better go home to Melbourne, Australia.",2,,0,new york,,100000
+5,London...,"Well it wasn't here either, guess I'd better go home to Melbourne, Australia.",3,,0,london,,100000
+6,My shoe!,"Just as I came home from New York I looked down and there it was, right on my foot! That's a relief.",4,,0,sydney,,100000
+7,My shoe!,"Just as I came home from London I looked down and there it was, right on my foot! That's a relief.",5,,0,sydney,,100000

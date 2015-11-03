@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maciekchudek.geoadventure"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Needed in case we need to read a .GeoAdventure file from the SDcard -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/world"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.maciekchudek.geoadventure.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            
+            <intent-filter
+                android:icon="@drawable/world"
+                android:label="GeoAdventure File"
+                android:priority="1" >
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+                <action android:name="android.intent.action.PICK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+				
+                <!--
+                Use this to catch everything for debugging purposes  
+                <data android:pathPattern=".*\\.GeoAdventure.zip" android:mimeType="*/*" />  
+                -->
+				
+                <data android:scheme="content" android:host="*" android:pathPattern=".*" android:mimeType="application/zip" />
+                <data android:scheme="file" android:host="*" android:pathPattern=".*\\.GeoAdventure.zip" android:mimeType="application/zip" />
+                <data android:scheme="http" android:host="*" android:pathPattern=".*\\.GeoAdventure.zip" android:mimeType="application/zip" />
+                <data android:scheme="https" android:host="*" android:pathPattern=".*\\.GeoAdventure.zip" android:mimeType="application/zip" />
+
+            </intent-filter>
+
+            
+            
+
+            
+        </activity>
+        <activity
+            android:name="com.maciekchudek.geoadventure.GameActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.maciekchudek.geoadventure.MainActivity" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maciekchudek.geoadventure.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

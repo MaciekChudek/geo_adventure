@@ -1,0 +1,38 @@
+
+#0 Directory of intalled files
+#0 Error catching for if files aren't where there supposed to be
+
+
+#1 Design adventure file structure
+#2 Save on SD
+#3 Load required parts in to memory
+#4 Call dynamic parts on demand
+
+
+#0 an interface for loading the .GeoAdventure files when click in browser
+
+
+#0 validation for adventure files
+#0 wesite to coordinate everything
+#0 adventure maker software
+
+
+
+
+#### .GeoAdventure.zip file
+
+	#meta_information
+		- title
+		- author
+		- date
+		- version
+		- other
+		
+	#design
+		- basic design of communicator
+		- logic of how that changes...
+	
+	#adventure_logic.csv
+		as above
+	
+	#/assets

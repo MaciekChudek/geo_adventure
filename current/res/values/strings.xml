@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Geo-Adventure</string>
+    <string name="action_settings">Settings</string>
+    <string name="navButtonMessages">Messages</string>
+    <string name="navButtonAttachedImage">View attached image</string>
+    <string name="navButtonScanner">Scanner</string>
+    <string name="navButtonScannerRunning">Stop Scan</string>
+    <string name="tempMessage">Electo-termporal singularity exploited. Steam pressure returning to normal. Time-cogs decoupling. Scanner installed in archaic communication device.</string>
+    <string-array name="main_menu_entries">
+    	<item>Play adventure</item>
+    	<item>Restart adventure</item>
+    	<item>Delete adventure</item>
+    	<item>Import adventure</item>
+    </string-array>
+
+</resources>

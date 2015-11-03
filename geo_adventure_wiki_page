@@ -1,0 +1,60 @@
+
+
+
+==What are GeoAdventures?==
+
+GeoAdventures are like the "Choose Your Own Adventure" books you may have read as a kid. Except that instead of reading a book, you read them on your android device, and instead of turning to specific pages, you make choices by actually going to physical locations.
+
+For instance, the story might read:
+
+"The bank robbers scatter before you. The leader heads towards the old cemetry on 5th street, while the others make a break for the central train station. After them!"
+
+To unlock the next part of the story you would need to actually go to one of those two locations. Of course, which option you choose can send the story spiraling in very different directions.
+
+GeoAdventure is basically a simple android app that takes a spreadsheet of story elements and associated images and navigates through them based on your actual GPS location. Besides interactive fiction, GeoAdventure could be used to make interactive tours of cities, scavenger hunts and probably even some sort of fancy cutting-edge poetry.
+
+==How do I play a GeoAdventure?==
+
+First, you'll need to install the GeoAdventure android app on your GPS-equipped device. Here's a link to the current .apk file. If you need to know how to install .apk files, just google.
+
+Then you'll need to load in an actual .GeoAdventure file. Since GeoAdventures are all set in specific locations with specific GPS coordinates, the GeoAdventure app doesn't come pre-equipped with any generic ones. You'll need to find an install a GeoAdventure that's set somewhere near you. Below I'm keeping a list of publically released GeoAdventures that people have created. If there isn't already one in your area, why no make one?
+
+To install a GeoAdventure file, you'll need to get it to your device somehow (email, internet like, put it on an sdcard, etc.) and then click on it. Android should pass any files that end with .GeoAdventure to the GeoAdventure app which will attempt to automatically import them. 
+
+==How do I create a GeoAdventure?==
+
+
+A .GeoAventure file is just a zip archive where the extension has been changed from .zip to .GeoAdventure (so that Android know to pass it to the GeoAdventure app). The zip archive must contain the following two files:
+
+	meta.csv : a spreadsheet containing the adventure meta-data
+	
+	adventure.csv : a spreadsheet containing the logic of the actual advenutre
+
+Additionally it can (but needn't) also contain a directory called "assets" which can contain any number of images, but cannot contain any subdirectories.
+
+GeoAventure files cannot contain anything other than these elements, or the app will reject them.
+
+The simplest way to make a GeoAdventure is to download my *.GeoAdventure example file* and build off of that. Just unzip the file, open the .csv files in a spreadsheet program. Edit them to make your GeoAdventure. Resave them as csv files (make sure they use a comma delimiter and double-quotes surround any fields with newlines in them). Put your images in the assets folder. Rezip the whole thing and change the file extension from .zip to .GeoAdventure.
+
+
+==How do I edit the meta.csv file?==
+
+The meta.csv file is used to define various meta-data about the adventure (like its title).
+
+The meta.csv file has two columns. One is called variable and the other value. It must contain at least three rows, which correspond to these variables:
+
+title: the title of your GeoAdventure
+author: your name or psuedonym
+version: the version number of the adventure, so you can install different version concurrently if you want
+
+Eventually, this file will control various aspects of how the GeoAdventure app looks and feels during your adventure.
+
+==How do I edit the adventure.csv file?==
+
+The adventure.csv is where you write your GeoAdventure story. Each row corresponds to one segment of the story. Here's a column-by-column breakdown.
+
+
+
+
+
+
